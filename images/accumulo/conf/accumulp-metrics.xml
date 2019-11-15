@@ -1,0 +1,30 @@
+<config>
+    <logging>
+        <dir>${ACCUMULO_HOME}/metrics</dir>
+    </logging>
+
+    <master>
+        <enabled type="boolean">false</enabled>
+        <logging type="boolean">false </logging>
+    </master>
+    <tserver>
+        <enabled type="boolean">false</enabled>
+        <logging type="boolean">false </logging>
+        <update>
+            <enabled type="boolean">false</enabled>
+            <logging type="boolean">false </logging>
+        </update>
+        <scan>
+            <enabled type="boolean">false</enabled>
+            <logging type="boolean">false </logging>
+        </scan>
+        <minc>
+            <enabled type="boolean">false</enabled>
+            <logging type="boolean">false </logging>
+        </minc>
+    </tserver>
+    <thrift>
+        <enabled type="boolean">false</enabled>
+        <logging type="boolean">false </logging>
+    </thrift>
+</config>

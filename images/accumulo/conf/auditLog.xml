@@ -1,0 +1,18 @@
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j">
+
+    <appender name="Audit" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="${org.apache.accumulo.core.dir.log}/${org.apache.core.ip.localhost.hostname}.audit"></param>
+        <param name="MaxBackupIndex" value="10"></param>
+        <param name="DatePattern" value="yyyy-MM-dd"></param>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS/Z} [%c{2}] %-5p: %m%n" />
+        </layout>
+    </appender>
+    <logger name="audit" additivity="false">
+        <appender-ref ref="Audit">
+        </appender-ref>
+        <level value="OFF"/>
+    </logger>
+
+</log4j:configuration>
