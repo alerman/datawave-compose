@@ -5,4 +5,4 @@ AuthorizedKeysFile %h/.ssh/authorized_keys
 PasswordAuthentication no
 ChallengeResponseAuthentication no
 X11Forwarding yes
-Subsysten sfto /usr/lib/openssh/sftp-server
+Subsystem sfto /usr/lib/openssh/sftp-server

@@ -5,7 +5,7 @@ RUN useradd -d /opt/accumulo -p "accumulo" accumulo
 RUN usermod -U accumulo
 ADD ./accumulo.tgz /opt/accumulo
 RUN ln -s /opt/accumulo/accumulo-1.9.2 /opt/accumulo/current
-#COPY ./conf/* /opt/accumulo/current/conf
+COPY ./conf/* /opt/accumulo/current/conf/
 RUN chown -R accumulo:accumulo /opt/accumulo
 
 

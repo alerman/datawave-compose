@@ -64,4 +64,7 @@ services:
       SERVICE_PRECONDITION: "namenode:9870 datanode:9864 resourcemanager:8088"
     env_file:
       - ./hadoop.env
-
+  master:
+    image: accumulo_base
+    container_name: master
+    hostname: master
